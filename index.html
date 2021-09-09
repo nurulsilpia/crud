@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Quantity Production | CRUD</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <a href="index.html" class="logo"><img src="assets/img/futami.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#features">Features</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- End navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+      <h1>Quantity Production CRUD</h1>
+      <h2>A Part of Futami Food & Beverage</h2>
+      <a href="#features" class="btn-get-started scrollto">Learn More</a>
+      <img src="assets/img/hero-img.png" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Features</h2>
+          <p>
+            CRUD adalah singkatan dari create, read, update, and delete. Keempat istilah tersebut merupakan fungsi utama yang nantinya diimplementasikan ke dalam database melalui form. Ketika user mengisi form, data dalam form tersebut akan di proses oleh Controller dan dikirimkan ke database serta ditampilkan kembali di View.
+          </p>
+        </div>
+
+          <div class="row content" >
+            <div class="pt-3" data-aos="fade-left" data-aos-delay="100">
+              <h3># Route</h3>
+              <img src="assets/img/routes.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="routes">
+              <p>
+                Buat route pada file <i>web.php</i> yang berada di <i>routes>web.php</i> agar kita dapat mengakses halaman view. <span>QuantityProduction</span> menunjukan nama url untuk kita akses, dan <span>\App\Http\Controllers\QuantityProductionController</span> adalah Controller.
+              </p>
+            </div>
+          </div>
+
+          <div class="row content mt-5">
+            <div data-aos="fade-right">
+              <h3># Database</h3>
+              <div class="text-center">
+                <img src="assets/img/db.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="database">
+              </div>
+              <p>
+                Buat database secara manual di <i>phpMyAdmin</i>. Nama database yang digunakan adalah <span>futami_db</span> dengan nama table <span>tbl_quantity_production</span>. Jangan lupa membuat <span>id_quantity_production</span> sebagai <i>primary key</i> dan <i>Auto Increment</i>.
+              </p>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div data-aos="fade-left">
+              <h3># Function index()</h3>
+              <div class="text-center">
+                <img src="assets/img/index.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="index()">
+              </div>
+              <p>
+                Variabel <span><i>$data_quantityProduction</i></span> mengambil data yang ada pada table <span><i>tbl_quantity_production</i></span>. Yang mana data tersebut akan di-<i>return</i> pada halaman index dalam folder <i>QuantityProduction</i>. Fungsi <i>index()</i> akan dieksekusi apabila kita mengakses halaman index melalui url. <span>http://127.0.0.1:8000/QuantityProduction/</span> 
+              </p>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div data-aos="fade-right">
+              <h3># Function create()</h3>
+              <div class="text-center">
+                <img src="assets/img/create.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="create()">
+              </div>
+              <p class="text-justify">
+                <i>Function create()</i> dijalankan saat kita mengakses url <span>http://127.0.0.1:8000/QuantityProduction/create</span>. Dalam potongan kode diatas, function create() akan me-<i>return</i> sebuah view, yaitu file <i>create</i> yang berada pada folder <i>QuantityProduction</i>. Yang mana dalam file create tersebut terdapat sebuat form untuk menambahkan data baru. 
+              </p>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div data-aos="fade-left">
+              <h3># Function store()</h3>
+              <div class="text-center">
+                <img src="assets/img/store.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="store()">
+              </div>
+              <p>
+                Semua string yang ada dalam form <i><span>create</span></i> akan dikumpulkan pada variabel <i><span>$request</span></i> dan dikirimkan ke database. Apabila berhasil maka akan me-<i>return</i> halaman <i>index</i> dan data akan bertambah. Function <i>show()</i> di akses lewat form yang ada pada file <i>create</i> dalam folder <i>QuantityProduction</i>.
+              </p>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div data-aos="fade-right">
+              <h3># Function show()</h3>
+              <div class="text-center">
+                <img src="assets/img/show.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="show()">
+              </div>
+              <p>
+                Apabila kita mengakses button <span>Show</span> pada halaman <i>index</i>, function show akan dijalankan. Yang mana variabel <i><span>$tampil</span></i> mengambil data dari table <i><span>tbl_quantity_production</span></i> berdasarkan <i>id_quantity_production</i> yang merupakan <i>primary key</i>. Function ini akan mengembalikan view <i><span>tampil</span></i> yang ada dalam folder <i>QuantityProduction</i>
+              </p>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div data-aos="fade-left">
+              <h3># Function edit()</h3>
+              <div class="text-center">
+                <img src="assets/img/edit.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="edit()">
+              </div>
+              <p>
+                Function <i>edit()</i> dijalankan apabila kita mengakses button <i><span>edit</span></i> yang ada pada halaman <i>index</i>. Variabel <i><span>$edit</span></i> mengambil data dari table <i><span>tbl_quantity_production</span></i> berdasarkan <i>id_quantity_production</i> yang merupakan <i>primary key</i>. Function ini akan me-<i>return</i> file <i><span>edit</span></i> yang ada dalam folder <span><i>QuantityProduction</i></span>.
+              </p>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div data-aos="fade-right">
+              <h3># Function update()</h3>
+              <div class="text-center">
+                <img src="assets/img/update.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="update()">
+              </div>
+              <p>
+                Function <i>update()</i> digunakan untuk mengubah atau memperbarui data. Fungsi ini dieksekusi saat user mengisi dan mengirimkan data pada form yang terdapat di file <i><span>edit</span></i>. Saat fungsi ini berhasil dijalankan, data akan diperbarui dan akan me-<i>return</i> halaman index.
+              </p>
+            </div>
+          </div>
+
+          <div class="row content">
+            <div data-aos="fade-left">
+              <h3># Function destroy()</h3>
+              <div class="text-center">
+                <img src="assets/img/destroy.png" class="img-fluid rounded-1 my-3 shadow-sm" alt="destroy()">
+              </div>
+              <p>
+                Function <i>destroy()</i> digunakan untuk menghapus data. Function ini dieksekusi ketika kita mengakses button <i><span>delete</span></i> yang ada dihalaman <i>index</i>. Fungsi ini menghapus data berdasarkan <i>id_quantity_production</i> yang merupakan <i>primary key</i>, dan mengembalikan view <i>index</i>.
+              </p>
+            </div>
+          </div>
+
+      </div>
+    </section><!-- End Features Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Futami</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <i>Author: Nurul Silpia</i><br>
+          Futami Food & Beverage
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
